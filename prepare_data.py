@@ -50,7 +50,7 @@ def prepare_dataframe(keyword, ntweets):
     df_tweets_pol['create_date'] = [t['created_at'] for t in tweets]
     df_tweets_pol['create_date'] = df_tweets_pol['create_date'].apply(time_transform)
     
-    df_tweets_pol_to = df_tweets_pol.sort_values(by='sentiment_score', ascending=False).head(5)
+    polality_json = df_tweets_pol.sort_values(by='sentiment_score', ascending=False).head(5).to_json()
 
 
     #create dataframe for retweet_json 
@@ -61,7 +61,7 @@ def prepare_dataframe(keyword, ntweets):
     df_tweets_ret['create_date'] = [t['created_at'] for t in tweets]
     df_tweets_ret['create_date'] = df_tweets_ret['create_date'].apply(time_transform)
     
-    df_tweets_ret_to = df_tweets_ret.sort_values(by='num_retweet', ascending=False).head(5)
+    retweet_json = df_tweets_ret.sort_values(by='num_retweet', ascending=False).head(5).to_json()
 
 
     #count keywords
@@ -86,6 +86,17 @@ def prepare_dataframe(keyword, ntweets):
     keyphrase_json = df_keyphrase.to_json()
     print(f"keyphrase_json:{keyphrase_json}")
 
+
+    #number tweet
+    num_tweet = len(tweets)
+    print(num_tweet)
+
+
+    #average polality
+    average_polality = df_tweets_pol['sentiment_score'].mean()
+    print(average_polality)
+
+
     #create a wordcloud
     wc = WordCloud(width=1200, height=800, max_font_size=110, collocations=False).generate(all_text())
     plt.axis("off")
@@ -95,6 +106,6 @@ def prepare_dataframe(keyword, ntweets):
 
 
 
-    return(df_tweets_pol_to, df_tweets_ret_to)
+    return(polality_json, retweet_json, keyword_json, keyphrase_json, num_tweet, average_polality)
 
 
