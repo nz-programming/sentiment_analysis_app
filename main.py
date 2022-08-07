@@ -8,11 +8,12 @@ ntweets = 10
 
 
 def get_data():
-    df_tweets = prepare_dataframe(keyword, ntweets).to_json()
-    print(f'main:{df_tweets}')
+    df_tweets_pol_to, df_tweets_ret_to = prepare_dataframe(keyword, ntweets)
+    print(f'main:{df_tweets_pol_to}')
+    print(f'main:{df_tweets_ret_to}')
 
-    polality_joson = df_tweets
-    retweet_json = df_tweets
+    polality_joson = df_tweets_pol_to.to_json()
+    retweet_json = df_tweets_ret_to.to_json()
     keyword_count = 5000
     keyphrase_count = 3000
     wordcloud = 'test'.encode('utf-8')
