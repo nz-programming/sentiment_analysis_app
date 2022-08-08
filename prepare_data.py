@@ -10,6 +10,7 @@ from textblob import TextBlob
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import nltk
+import numpy as np
 
 def prepare_dataframe(keyword, ntweets):
     query = f'{keyword} -filter:retweets'
@@ -99,13 +100,19 @@ def prepare_dataframe(keyword, ntweets):
 
     #create a wordcloud
     wc = WordCloud(width=1200, height=800, max_font_size=110, collocations=False).generate(all_text())
-    plt.axis("off")
-    plt.imshow(wc, interpolation="bilinear")
-    plt.show()
+    wordcloud = str(wc.to_array())
+    print(wordcloud)
+    # wordcloud = wc.to_file(f'{datetime.date.today()}.jpg')
+    # file_wc_2 = wc.to_file
+    # print(file_wc_1)
+    # print(file_wc_2)
+    # plt.axis("off")
+    # plt.imshow(wc, interpolation="bilinear")
+    # plt.show()
 
 
 
 
-    return(polality_json, retweet_json, keyword_json, keyphrase_json, num_tweet, average_polality)
+    return(polality_json, retweet_json, keyword_json, keyphrase_json, wordcloud, num_tweet, average_polality)
 
 

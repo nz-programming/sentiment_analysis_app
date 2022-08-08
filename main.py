@@ -3,12 +3,12 @@ import datetime
 import tweet_add
 
 # parameter for search and collect
-keyword = "lipstick_2"
+keyword = "lipstick"
 ntweets = 10
 
 
 def get_data():
-    polality_json, retweet_json, keyword_json, keyphrase_json, num_tweet, average_polality = prepare_dataframe(keyword, ntweets)
+    polality_json, retweet_json, keyword_json, keyphrase_json, wordcloud, num_tweet, average_polality = prepare_dataframe(keyword, ntweets)
     print(f'main:{polality_json}')
     print(f'main:{retweet_json}')
 
@@ -16,7 +16,8 @@ def get_data():
     retweet_json = retweet_json
     keyword_count = keyword_json
     keyphrase_count = keyphrase_json
-    wordcloud = 'test'.encode('utf-8')
+    #wordcloud = 'test'.encode('utf-8')
+    wordcloud = wordcloud.encode('utf-8')
     number_tweet = num_tweet
     average_polality = average_polality
     date = datetime.date.today()
