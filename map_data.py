@@ -9,7 +9,7 @@ Base = declarative_base()
 class map_data_db(Base):
     __tablename__ = 'main'
 
-    tweet_id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     polality_joson = Column(LONGTEXT, nullable=False)
     retweet_json = Column(LONGTEXT, nullable=False)
     keyword_count = Column(Integer, nullable=False)
