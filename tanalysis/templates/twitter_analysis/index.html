@@ -8,6 +8,11 @@
         <title>django template</title>
     </head>
     <body>
-        hello djnago template
+        <ul>
+            hello djnago template
+            {% for obj in object_list %}
+            <li>{{ obj.id }}</li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
