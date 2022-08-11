@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+body{
+    font-family:“Times New Roman”;
+    margin: 0;
+}
+
+.serch_word_wrap{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.search_word{
+    margin: 0;
+}
