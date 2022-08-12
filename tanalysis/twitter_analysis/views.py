@@ -1,17 +1,9 @@
-from tkinter import Variable
 from django.shortcuts import render
-
-# Create your views here.
-from django.http import HttpResponse
 from .models import Main
-
 import json
 
-# def index(req):
-#     # return HttpResponse('Hello World')
-#     return render(req, 'twitter_analysis/index.html')
 
-def index(request):
+def gorira(request):
     template_name = 'twitter_analysis/index.html'
     labels = []
     data = []
@@ -27,7 +19,24 @@ def index(request):
         'labels': labels,
         'data': data,
     }
-    
+
     context = {'data_json':json.dumps(var, default=str)}
 
+    # if request.method == "POST":
+    #     if "week_button" in request.POST:
+    #         print("week_button")
+    #     elif "month_button" in request.POST:
+    #         print("month_button")
+    #     elif "year_button" in request.POST:
+    #         print("year_button")
+    
+    if request.method == "GET":
+        if "week_button" in request.GET:
+            print("GET week_button")
+        elif "month_button" in request.GET:
+            print("GET month_button")
+        elif "year_button" in request.GET:
+            print("GET year_button")
+
     return render(request, template_name, context)
+

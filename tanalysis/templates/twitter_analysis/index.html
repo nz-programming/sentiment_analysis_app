@@ -92,9 +92,13 @@
 
         <!-- button -->
         <div class="button_container">
-            <button type="submit" class="btn btn-outline-secondary btn-light text-muted border-secondary">Week</button>
-            <button type="submit" class="btn btn-outline-secondary btn-light text-muted border-secondary">Month</button>
-            <button type="submit" class="btn btn-outline-secondary btn-light text-muted border-secondary">Year</button>
+            <form method="get">
+                <!-- {% csrf_token %} -->
+                <!-- {{ form.as_p }} -->
+                <button type="submit" name="week_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Week</button>
+                <button type="submit" name="month_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Month</button>
+                <button type="submit" name="year_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Year</button>
+            </form>
         </div>
 
         <!-- footer -->
