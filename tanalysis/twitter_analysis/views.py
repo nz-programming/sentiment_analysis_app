@@ -22,13 +22,12 @@ def index(request):
     for main in queryset:
         labels.append(main.date)
         data.append(main.average_polality)
-    #context["object_list"] =queryset
 
     var = {
         'labels': labels,
         'data': data,
     }
-    # context["object_list"] =[labels, data] 
+    
     context = {'data_json':json.dumps(var, default=str)}
-    #return render(request, template_name, context)
+
     return render(request, template_name, context)
