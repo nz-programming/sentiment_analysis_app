@@ -17,6 +17,9 @@
         <!-- original css -->
         <link href="{% static 'twitter_analysis/style.css' %}" rel="stylesheet">
 
+        <!-- chart.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
         <title>Sentiment analysis</title>
     </head>
     <body>
@@ -49,13 +52,51 @@
             <div class="serch_word_wrap">
                 <p class="search_word">Search Word: lipstick</p>
             </div>
+
             <div class="analysis_wrap">
+                <canvas id="myChart" width="400" height="400"></canvas>
+                <script>
+                const data = JSON.parse('{{data_json|safe}}')
+                var ctx = document.getElementById("myChart");
+                var myLineChart  = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        // labels: ["赤", "青", "黄", "緑", "紫", "橙"],
+                        // labels:["{{object_list.0}}"],
+                        labels: data.labels,
+                        datasets: [{
+                            label: 'Sentiment Score',
+                            // data: [12, 19, 3, 5, 2, 3],
+                            data:data.data,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                });
+                </script>
+            </div>
+
+            <!-- <div class="analysis_wrap">
                 {% for obj in object_list %}
                 <p class="list-group-item list-group-item-action">
                     {{ obj.average_polality}}
                 </p>
                 {% endfor %}
-            </div>
+            </div> -->
         </div>
 
         <div class="container">

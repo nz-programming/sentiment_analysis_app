@@ -1,16 +1,34 @@
+from tkinter import Variable
 from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponse
 from .models import Main
 
+import json
+
 # def index(req):
 #     # return HttpResponse('Hello World')
 #     return render(req, 'twitter_analysis/index.html')
 
-def index(req):
+def index(request):
     template_name = 'twitter_analysis/index.html'
-    ctx ={}
-    qs = Main.objects.all()
-    ctx["object_list"] =qs
-    return render(req, template_name, ctx)
+    labels = []
+    data = []
+
+    context ={}
+    queryset = Main.objects.all()
+
+    for main in queryset:
+        labels.append(main.date)
+        data.append(main.average_polality)
+    #context["object_list"] =queryset
+
+    var = {
+        'labels': labels,
+        'data': data,
+    }
+    # context["object_list"] =[labels, data] 
+    context = {'data_json':json.dumps(var, default=str)}
+    #return render(request, template_name, context)
+    return render(request, template_name, context)
