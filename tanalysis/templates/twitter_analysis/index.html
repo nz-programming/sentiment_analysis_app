@@ -14,13 +14,13 @@
         crossorigin="anonymous"
         />
 
-        <!-- original css -->
-        <link href="{% static 'twitter_analysis/style.css' %}" rel="stylesheet">
-
         <!-- chart.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 
-        <title>Sentiment analysis</title>
+        <!-- original css -->
+        <link href="{% static 'twitter_analysis/style.css' %}" rel="stylesheet">
+
+        <title>Twitter Analysis</title>
     </head>
     <body>
         <!-- navigation bar -->
@@ -48,11 +48,13 @@
             </nav>
         </div>
 
+        <!-- contents -->
         <div class="contents_container">
             <div class="serch_word_wrap">
                 <p class="search_word">Search Word: lipstick</p>
             </div>
 
+            <!-- analysis -->
             <div class="analysis_wrap">
                 <div class="canvas-container">
                     <canvas id="myChart"></canvas>
@@ -88,6 +90,14 @@
             </div>
         </div>
 
+        <!-- button -->
+        <div class="button_container">
+            <button type="submit" class="btn btn-outline-secondary btn-light text-muted border-secondary">Week</button>
+            <button type="submit" class="btn btn-outline-secondary btn-light text-muted border-secondary">Month</button>
+            <button type="submit" class="btn btn-outline-secondary btn-light text-muted border-secondary">Year</button>
+        </div>
+
+        <!-- footer -->
         <div class="footer_container">
             <footer class="py-3 my-4">
                 <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -98,10 +108,14 @@
                 <p class="text-center text-muted">&copy; Hiroki Ando</p>
             </footer>
         </div>
+
     </body>
+    
+    <!-- Booststrap5 -->
     <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
     ></script>
+
 </html>
