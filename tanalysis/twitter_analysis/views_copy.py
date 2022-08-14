@@ -14,12 +14,15 @@ def ccc(request):
                 print("through day button")
                 return HttpResponse("ハローワールド")
             elif "week_button" in request.GET:
-                print("GET week button")
+                print("through day button")
+                return HttpResponse("ハローワールド")
 
             elif "month_button" in request.GET:
-                print("GET month_button")
+                print("through day button")
+                return HttpResponse("ハローワールド")
 
             elif "year_button" in request.GET:
-                print("GET year_button")
+                print("through day button")
+                return HttpResponse("ハローワールド")
             else:
                 return HttpResponse("ハローワールド")

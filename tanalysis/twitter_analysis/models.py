@@ -120,7 +120,7 @@ class Main(models.Model):
     retweet_json = models.JSONField(blank=True, null=True)
     keyword_count = models.TextField()
     keyphrase_count = models.TextField()
-    wordcloud = models.TextField()
+    clean_text = models.TextField()
     number_tweet = models.IntegerField()
     average_polality = models.FloatField()
     date = models.DateField()

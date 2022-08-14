@@ -95,9 +95,12 @@
             <form action="http://127.0.0.1:8000/twitter_analysis/" method="get">
                 <!-- {% csrf_token %} -->
                 <!-- {{ form.as_p }} -->
-                <button type="submit" name="day_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Day</button>
                 <button type="submit" name="week_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Week</button>
+            </form>
+            <form action="http://127.0.0.1:8000/twitter_analysis/bbb" method="get">
                 <button type="submit" name="month_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Month</button>
+            </form>
+            <form action="http://127.0.0.1:8000/twitter_analysis/" method="get">
                 <button type="submit" name="year_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Year</button>
             </form>
         </div>

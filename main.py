@@ -1,14 +1,15 @@
+from config import *
 from prepare_data import prepare_dataframe
 import datetime
 import tweet_add
 
 # parameter for search and collect
-keyword = "lipstick"
-ntweets = 10
+
+
 
 
 def get_data():
-    polality_json, retweet_json, keyword_json, keyphrase_json, wordcloud, num_tweet, average_polality = prepare_dataframe(keyword, ntweets)
+    polality_json, retweet_json, keyword_json, keyphrase_json, clean_text, num_tweet, average_polality = prepare_dataframe(keyword, ntweets)
     print(f'main:{polality_json}')
     print(f'main:{retweet_json}')
 
@@ -16,12 +17,12 @@ def get_data():
     retweet_json = retweet_json
     keyword_count = keyword_json
     keyphrase_count = keyphrase_json
-    #wordcloud = 'test'.encode('utf-8')
-    wordcloud = wordcloud.encode('utf-8')
+    #clean_text = 'test'.encode('utf-8')
+    clean_text = clean_text.encode('utf-8')
     number_tweet = num_tweet
     average_polality = average_polality
     date = datetime.date.today()
-    tweet_add.add_tweet(polality_json, retweet_json, keyword_count, keyphrase_count, wordcloud, number_tweet, average_polality, date)
+    tweet_add.add_tweet(polality_json, retweet_json, keyword_count, keyphrase_count, clean_text, number_tweet, average_polality, date)
 
 
 if __name__ == '__main__':

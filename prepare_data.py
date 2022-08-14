@@ -98,10 +98,11 @@ def prepare_dataframe(keyword, ntweets):
     print(average_polality)
 
 
-    #create a wordcloud
-    wc = WordCloud(width=1200, height=800, max_font_size=110, collocations=False).generate(all_text())
-    wordcloud = str(wc.to_array())
-    print(wordcloud)
+    #create a clean text
+    clean_text = all_text()
+    # wc = WordCloud(width=1200, height=800, max_font_size=110, collocations=False).generate(all_text())
+    # wordcloud = str(wc.to_array())
+    # print(wordcloud)
     # wordcloud = wc.to_file(f'{datetime.date.today()}.jpg')
     # file_wc_2 = wc.to_file
     # print(file_wc_1)
@@ -113,6 +114,6 @@ def prepare_dataframe(keyword, ntweets):
 
 
 
-    return(polality_json, retweet_json, keyword_json, keyphrase_json, wordcloud, num_tweet, average_polality)
+    return(polality_json, retweet_json, keyword_json, keyphrase_json, clean_text, num_tweet, average_polality)
 
 
