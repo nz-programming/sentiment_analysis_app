@@ -23,7 +23,7 @@ def connect_api_client():
 
 def collect_tweets(query, ntweets):
     api = connect_api_client()
-    #tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang="en", tweet_mode='extended').items(ntweets)]
-    tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang="en", tweet_mode='extended').items()]
+    tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang="en", tweet_mode='extended').items(ntweets)]
+    #tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang="en", tweet_mode='extended').items()]
     return tweets
 

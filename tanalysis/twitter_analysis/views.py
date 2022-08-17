@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Main
 import json
-import pandas as pd
 
 def index(request):
     template_name = 'twitter_analysis/index.html'
@@ -17,6 +16,12 @@ def index(request):
 
     if request.method == "GET":
         if "week_button" in request.GET:
+            print("GET week button")
+
+        elif "month_button" in request.GET:
+            print("GET month_button")
+
+        elif "year_button" in request.GET:
             queryset = Main.objects.all()
             for record in queryset:
                 labels.append(record.date)
@@ -28,12 +33,6 @@ def index(request):
             }
 
             context = {'data_json':json.dumps(var, default=str)}
-            print("GET week button")
-
-        elif "month_button" in request.GET:
-            print("GET month_button")
-
-        elif "year_button" in request.GET:
             print("GET year_button")
 
         # else:
