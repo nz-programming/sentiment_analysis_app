@@ -6,7 +6,7 @@ import datetime
 def year_button(request):
     template_name = 'twitter_analysis/index.html'
     labels = []
-    data = []
+    average_polality = []
     context ={}
     today = datetime.date.today()
 
@@ -14,11 +14,11 @@ def year_button(request):
     queryset = Main.objects.filter(date__lt=today, date__gte=(today + datetime.timedelta(-365)))
     for record in queryset:
         labels.append(record.date)
-        data.append(record.average_polality)
+        average_polality.append(record.average_polality)
 
     var = {
         'labels': labels,
-        'data': data,
+        'average_polality': average_polality,
     }
 
     context = {'data_json':json.dumps(var, default=str)}

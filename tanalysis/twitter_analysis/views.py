@@ -5,52 +5,37 @@ import json
 def index(request):
     template_name = 'twitter_analysis/index.html'
     labels = []
-    data = []
-    context ={}
-    # queryset = Main.objects.all()
-    # for record in queryset:
-    #     df_sentiment_analysis=pd.DataFrame([t['date'] for t in record.date], columns=['date'])
-    #     df_sentiment_analysis['average_polality']=[t['average_polality'] for t in record.average_polality]
-    # print(df_sentiment_analysis)
+    average_polality = []
+    polality_joson = []
+    keyword_count = []
+    id = []
+
+    queryset = Main.objects.all()
+    for record in queryset:
+        #date
+        labels.append(record.date)
+        #sentiment score
+        average_polality.append(record.average_polality)
+        #
+        polality_joson.append(record.polality_joson)
+        #
+        keyword_count.append(record.keyword_count)
+        #
+        id.append(record.id)
+    print(f"typeofpolality_joson:{type(record.polality_joson)}")
+    # print(f"labels:{labels}")
+    # print(f"average_polality:{average_polality}")
+    # print(f"polality_joson:{polality_joson}")
+    print(type(polality_joson))
+    print(type(json.dumps(polality_joson, default=str)))
+    var = {
+        'labels': labels,
+        'average_polality': average_polality,
+        'polality_json':polality_joson,
+        'keyword_count':keyword_count
+        # 'id': id
+    }
     
-
-    if request.method == "GET":
-        if "week_button" in request.GET:
-            print("GET week button")
-
-        elif "month_button" in request.GET:
-            print("GET month_button")
-
-        elif "year_button" in request.GET:
-            queryset = Main.objects.all()
-            for record in queryset:
-                labels.append(record.date)
-                data.append(record.average_polality)
-
-            var = {
-                'labels': labels,
-                'data': data,
-            }
-
-            context = {'data_json':json.dumps(var, default=str)}
-            print("GET year_button")
-
-        # else:
-        #     print("GET year_button")
-    # if request.method == "POST":
-    #     if "week_button" in request.POST:
-    #         print("week_button")
-    #     elif "month_button" in request.POST:
-    #         print("month_button")
-    #     elif "year_button" in request.POST:
-    #         print("year_button")
-    
-    # if request.method == "GET":
-    #     if "week_button" in request.GET:
-    #         print("GET week_button")
-    #     elif "month_button" in request.GET:
-    #         print("GET month_button")
-    #     elif "year_button" in request.GET:
-    #         print("GET year_button")
-
-    return render(request, template_name, context)
+    dataset = {'data_json':json.dumps(var, default=str)}
+    print(type(dataset))
+    return render(request, template_name, dataset)
