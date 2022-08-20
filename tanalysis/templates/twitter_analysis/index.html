@@ -60,8 +60,11 @@
                     <canvas id="myChart"></canvas>
                 </div>
                 <div class="sample">---</div>
+<<<<<<< HEAD
                 <div class="sample_2">XXX</div>
                 <img src="a" class="sample_3">
+=======
+>>>>>>> 4a1b68079063efb801a0bd53f18721821e631d99
                 <script>
                     {% autoescape off %}
                     dataset = {{data_json}}
@@ -114,6 +117,7 @@
                         }
                     }
                 });
+<<<<<<< HEAD
 
                 // const polality_json = data.polality_json
                 // console.log(polality_json)
@@ -121,6 +125,9 @@
                 // console.log(id)
                 
 
+=======
+                
+>>>>>>> 4a1b68079063efb801a0bd53f18721821e631d99
                 function clickHandler(click){
                     // console.log(click)
                     const points = myLineChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
@@ -130,6 +137,7 @@
                         // console.log(points[0].index)
                         const dataset = points[0].datasetIndex;
                         const index = points[0].index;
+<<<<<<< HEAD
                         console.log(index)
                         const label= myLineChart.data.labels[index];
                         const keyword = data_keyword[index]
@@ -165,6 +173,13 @@
                         sample_3.setAttribute('src', polality_json["profile_img"]["1"]);
                         // sample_3.src = polality_json["profile_img"]["0"];
                         console.log(sample_3);
+=======
+                        const label= myLineChart.data.labels[index];
+                        // console.log(myLineChart.data.labels[index])
+                        const sample =  document.querySelector('.sample');
+                        sample.innerText = label;
+                        console.log(sample);
+>>>>>>> 4a1b68079063efb801a0bd53f18721821e631d99
                     }
                 }
                 myLineChart.canvas.onclick = clickHandler;
