@@ -18,7 +18,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 
         <!-- original css -->
-        <link href="{% static 'twitter_analysis/style.css' %}" rel="stylesheet">
+        <link href="{% static 'twitter_analysis/css/style.css' %}" rel="stylesheet">
 
         <title>Twitter Analysis</title>
     </head>
@@ -101,25 +101,14 @@
                 <p class="text-center text-muted">&copy; Hiroki Ando</p>
             </footer>
         </div>
+
+        <!-- read global variables for js-->
         <script>
             {% autoescape off %}
-            dataset = {{data_json}}
-            // console.log(typeof('{{data_json|safe}}'))
-            // console.log(typeof(test))
-            // console.log(test["labels"])
-            // console.log(typeof(test["labels"]))
-            // console.log(test["keyword_count"])
-            // console.log(typeof(test["keyword_count"]))
-            // console.log(test["keyword_count"][3])
-            // console.log(typeof(test["keyword_count"][3]))
-            // const testte = JSON.parse(test["keyword_count"][3])
-            // console.log(typeof(testte))
-            // console.log(testte)
-            // console.log(testte["count"]["lipstick"])
-
-            // console.log('{{data_json|safe}}')
+                dataset = {{data_json}}
             {% endautoescape %}
         </script>
+        <!-- read js files -->
         <script src="{% static 'twitter_analysis/js/chart.js' %}"></script>
         <script src="{% static 'twitter_analysis/js/clickhandle.js' %}"></script>
     </body>
