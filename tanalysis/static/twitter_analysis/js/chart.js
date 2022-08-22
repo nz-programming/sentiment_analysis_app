@@ -9,7 +9,7 @@ var myLineChart  = new Chart(context, {
         // labels: data.labels,
         labels: data_label,
         datasets: [{
-            label: 'Sentiment Score',
+            label: 'Daily Average Sentiment Score',
             // data:data.data,
             data:data_average_polality,
             backgroundColor: 'rgba(255, 99, 132, 0.2)',

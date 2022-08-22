@@ -56,11 +56,10 @@
 
             <!-- analysis -->
             <div class="analysis_wrap">
-                <div class="canvas-container">
-                    <canvas id="myChart"></canvas>
-                </div>
+                <!-- chart -->
+                {% include "twitter_analysis/chart/chart.html" %}
                 <!-- modal -->
-                {% include "twitter_analysis/modal.html" %}
+                {% include "twitter_analysis/modal/modal.html" %}
             </div>
         </div>
 
