@@ -1,4 +1,4 @@
 
 #main.py
 keyword = "Amazon OR amazon OR AMAZON"
-ntweets = 50000
+ntweets = 10
