@@ -24,29 +24,7 @@
     </head>
     <body>
         <!-- navigation bar -->
-        <div class="header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Twitter Analysis</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Sentiment analysis</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Retweet</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Keyword & Keyphrase</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+        {% include "twitter_analysis/header/navigationbar.html" %}
 
         <!-- contents -->
         <div class="contents_container">
@@ -77,16 +55,7 @@
         </div>
 
         <!-- footer -->
-        <div class="footer_container">
-            <footer class="py-3 my-4">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sentiment analysis</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Retweet</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Keyword & Keyphrase</a></li>
-                </ul>
-                <p class="text-center text-muted">&copy; Hiroki Ando</p>
-            </footer>
-        </div>
+        {% include "twitter_analysis/footer/footer.html" %}
 
         <!-- read global variables for js-->
         <script>
@@ -94,6 +63,7 @@
                 dataset = {{data_json}}
             {% endautoescape %}
         </script>
+
         <!-- read js files -->
         <script src="{% static 'twitter_analysis/js/chart.js' %}"></script>
         <script src="{% static 'twitter_analysis/js/clickhandle.js' %}"></script>
@@ -105,8 +75,5 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"
         ></script>
-        </body>
-    
-
-
+    </body>
 </html>

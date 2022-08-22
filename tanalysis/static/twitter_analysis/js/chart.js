@@ -29,13 +29,3 @@ var myLineChart  = new Chart(context, {
         }
     }
 });
-// function return_variables(){
-//     var chart_data = myLineChart;
-//     return chart_data;
-// }
-// const polality_json = data.polality_json
-// console.log(polality_json)
-// const id = data.id
-// console.log(id)
-
-
