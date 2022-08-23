@@ -7,6 +7,7 @@ def index(request):
     labels = []
     average_polality = []
     polality_joson = []
+    retweet_json = []
     keyword_count = []
     id = []
 
@@ -18,6 +19,8 @@ def index(request):
         average_polality.append(record.average_polality)
         #
         polality_joson.append(record.polality_joson)
+        #
+        retweet_json.append(record.retweet_json)
         #
         keyword_count.append(record.keyword_count)
         #
@@ -32,6 +35,7 @@ def index(request):
         'labels': labels,
         'average_polality': average_polality,
         'polality_json':polality_joson,
+        'retweet_json':retweet_json,
         'keyword_count':keyword_count
         # 'id': id
     }
