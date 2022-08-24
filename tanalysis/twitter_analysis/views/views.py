@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Main
+from ..models import Main
 import json
 
 def index(request):
@@ -9,7 +9,6 @@ def index(request):
     polality_joson = []
     retweet_json = []
     keyword_count = []
-    id = []
 
     queryset = Main.objects.all()
     for record in queryset:
@@ -17,18 +16,15 @@ def index(request):
         labels.append(record.date)
         #sentiment score
         average_polality.append(record.average_polality)
-        #
+        #JSON for sentiment score ranking
         polality_joson.append(record.polality_joson)
-        #
+        #JSON for number of retweet ranking
         retweet_json.append(record.retweet_json)
-        #
+        #JSON for number of keyword ranking
         keyword_count.append(record.keyword_count)
         #
-        id.append(record.id)
+        
     print(f"typeofpolality_joson:{type(record.polality_joson)}")
-    # print(f"labels:{labels}")
-    # print(f"average_polality:{average_polality}")
-    # print(f"polality_joson:{polality_joson}")
     print(type(polality_joson))
     print(type(json.dumps(polality_joson, default=str)))
     var = {
@@ -37,7 +33,6 @@ def index(request):
         'polality_json':polality_joson,
         'retweet_json':retweet_json,
         'keyword_count':keyword_count
-        # 'id': id
     }
     
     dataset = {'data_json':json.dumps(var, default=str)}

@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import Main
+from ..models import Main
 import json
 import datetime
 
-def year_button(request):
+def month_button(request):
     template_name = 'twitter_analysis/index.html'
     labels = []
     average_polality = []
@@ -11,7 +11,7 @@ def year_button(request):
     today = datetime.date.today()
 
     # lt = less than (not contain today), gte = greater than equal (contain the day)
-    queryset = Main.objects.filter(date__lt=today, date__gte=(today + datetime.timedelta(-365)))
+    queryset = Main.objects.filter(date__lt=today, date__gte=(today + datetime.timedelta(-30)))
     for record in queryset:
         labels.append(record.date)
         average_polality.append(record.average_polality)
