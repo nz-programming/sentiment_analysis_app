@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from ..models import Main
-import json
-from ..config.config import create_dataset
+from .common.common import create_dataset
 
 def index(request):
     queryset = Main.objects.all()
