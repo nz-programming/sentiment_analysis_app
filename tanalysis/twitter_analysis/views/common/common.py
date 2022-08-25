@@ -31,8 +31,10 @@ def create_dataset(queryset):
         'polality_json':polality_joson,
         'retweet_json':retweet_json,
         'keyword_count':keyword_count,
-        'keyword_count':keyphrase_count
+        'keyphrase_count':keyphrase_count
     }
     
+    print(var["keyword_count"][0])
+    print(type(var["keyword_count"][0]))
     dataset = {'data_json':json.dumps(var, default=str)}
     return (template_name, dataset)

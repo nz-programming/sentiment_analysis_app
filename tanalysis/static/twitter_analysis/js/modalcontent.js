@@ -1,19 +1,25 @@
 // get data at the cliked point
-function getIndex(click){
+function createModal(click){
     const points = myLineChart.getElementsAtEventForMode(click, 'nearest', {intersect: true}, true);
     if (points[0]){
         // show modal
         let myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {});
         myModal.show();
-        // set value on modal
+
+        // get index of the cliked point
         const index = points[0].index;
-        let createmodalcontent = new createModalContent(index);
-        // set sentiment score ranking content
-        createmodalcontent.setContent("sentiment");
-        createmodalcontent.setHtml();
-        // set number of retweet ranking content
-        createmodalcontent.setContent("retweet");
-        createmodalcontent.setHtml();
+
+        // create sentiment ranking and retweet ranking
+        let showexampletweet = new showExampleTweet(index);
+        // sentiment score ranking
+        showexampletweet.setContent("sentiment");
+        showexampletweet.setHtml();
+        // number of retweet ranking
+        showexampletweet.setContent("retweet");
+        showexampletweet.setHtml();
+
+        // create keyword chart
+        createKeywordChart(index);
     }
 }
-myLineChart.canvas.onclick = getIndex;
+myLineChart.canvas.onclick = createModal;

@@ -1,5 +1,5 @@
 const create_date =  dataset["create_date"];
-const sentiment_score = dataset["average_polality"]
+const sentiment_score = dataset["average_polality"];
 
 // chart with chart.js
 var context = document.getElementById("myChart");
