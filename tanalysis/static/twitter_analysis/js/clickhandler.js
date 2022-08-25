@@ -1,5 +1,5 @@
-const data_polality_json = dataset["polality_json"];
-const data_retweet_json = dataset["retweet_json"];
+const polality_json = dataset["polality_json"];
+const retweet_json = dataset["retweet_json"];
 
 
 // sort object accoring to sentiment score
@@ -16,11 +16,11 @@ function sortObject(object){
 // change content to show depending on keywords
 function changeContent(content){
     if(content == "sentiment"){
-        const datasource = data_polality_json;
+        const datasource = polality_json;
         const column = "sentiment_score";
         return [datasource, column];
     }else if(content == "retweet"){
-        const datasource = data_retweet_json;
+        const datasource = retweet_json;
         const column = "num_retweet";
         return [datasource, column];
     }else{
