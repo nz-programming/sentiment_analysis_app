@@ -19,7 +19,16 @@ function createModal(click){
         showexampletweet.setHtml();
 
         // create keyword chart
-        createKeywordChart(index);
+
+        let showmodalchart = new showModalChart(index);
+        showmodalchart.setContent("keyword")
+        showmodalchart.setVariable()
+        showmodalchart.createKeyWordChart();
+        showmodalchart.setContent("keyphrase")
+        showmodalchart.setVariable()
+        showmodalchart.createKeyPhraseChart();
+
+        // createKeywordChart(index);
     }
 }
 myLineChart.canvas.onclick = createModal;
