@@ -41,6 +41,11 @@ button{
 /* modal */
 .row{
     margin-bottom:10px;
+
+}
+
+.content_wrap{
+    overflow-x: scroll;
 }
 
 [class*="_icon_"]{
