@@ -1,6 +1,14 @@
 const create_date =  dataset["create_date"];
 const sentiment_score = dataset["average_polality"];
 
+console.log(typeof(create_date))
+console.log(create_date)
+
+const term_start =  document.querySelector(`.term_start`);
+term_start.innerText = create_date[0];
+const term_end =  document.querySelector(`.term_end`);
+term_end.innerText = create_date[create_date.length - 1];
+
 // chart with chart.js
 var context = document.getElementById("myChart");
 var myLineChart  = new Chart(context, {
