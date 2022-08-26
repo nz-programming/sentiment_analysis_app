@@ -75,7 +75,36 @@ class showExampleTweet{
         modal_title.innerText = label;
 
         // user icon
-        icon_1.setAttribute('src', data["profile_img"][ordered_object[0].key]);
+        fetch(data["profile_img"][ordered_object[0].key])
+        .then((response) => {
+            // ステータスが ok（ステータスコードが200-299の範囲）ならば
+            if(response.ok) { 
+                icon_1.setAttribute('src', data["profile_img"][ordered_object[0].key]);
+            } else {
+                icon_1.setAttribute('src', "../static/twitter_analysis/img/no-image-icon.PNG");
+            }
+        })
+        fetch(data["profile_img"][ordered_object[1].key])
+        .then((response) => {
+            // ステータスが ok（ステータスコードが200-299の範囲）ならば
+            if(response.ok) { 
+                icon_2.setAttribute('src', data["profile_img"][ordered_object[1].key]);
+            } else {
+                icon_2.setAttribute('src', "../static/twitter_analysis/img/no-image-icon.PNG");
+            }
+        })
+        fetch(data["profile_img"][ordered_object[2].key])
+        .then((response) => {
+            // ステータスが ok（ステータスコードが200-299の範囲）ならば
+            if(response.ok) { 
+                icon_3.setAttribute('src', data["profile_img"][ordered_object[2].key]);
+            } else {
+                icon_3.setAttribute('src', "../static/twitter_analysis/img/no-image-icon.PNG");
+            }
+        })
+
+        // icon_1.setAttribute('src', data["profile_img"][ordered_object[0].key]);
+        icon_1.setAttribute('src', "../static/twitter_analysis/img/no-image-icon.PNG");
         icon_2.setAttribute('src', data["profile_img"][ordered_object[1].key]);
         icon_3.setAttribute('src', data["profile_img"][ordered_object[2].key]);
 

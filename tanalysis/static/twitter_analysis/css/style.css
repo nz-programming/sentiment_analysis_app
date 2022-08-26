@@ -40,3 +40,9 @@ button{
 .row{
     margin-bottom:10px;
 }
+
+
+[class*="_icon_"]{
+    width: 75px;
+    height: 75px;
+}
