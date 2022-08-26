@@ -140,11 +140,20 @@ class showModalChart{
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    yAxes: [{
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Keyword'
+                        },
+                    },
+                    x: {
                         ticks: {
-                            beginAtZero:true
+                            beginAtZero:true,
+                            callback: function(value) {
+                                if (value % 1 === 0) {return value};
+                            },
                         }
-                    }]
+                    }
                 }
             }
         });
@@ -171,11 +180,20 @@ class showModalChart{
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    yAxes: [{
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Keyphrase'
+                        },
+                    },
+                    x: {
                         ticks: {
-                            beginAtZero:true
+                            beginAtZero:true,
+                            callback: function(value) {
+                                if (value % 1 === 0) {return value};
+                            },
                         }
-                    }]
+                    }
                 }
             }
         });

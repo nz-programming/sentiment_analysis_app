@@ -20,11 +20,21 @@ var myLineChart  = new Chart(context, {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-            yAxes: [{
+            y: {
+                title: {
+                    display: true,
+                    text: 'Sentiment Score'
+                },
                 ticks: {
                     beginAtZero:true
                 }
-            }]
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Date'
+                },
+            },
         }
     }
 });
