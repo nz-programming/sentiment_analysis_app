@@ -34,6 +34,13 @@ body{
     margin:10px 100px 0px 100px;
 }
 
+.canvas-container-modal{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin:10px 10px 0px 10px;
+}
+
 button{
     margin:10px
 }
@@ -46,6 +53,11 @@ button{
 
 .content_wrap{
     overflow-x: scroll;
+    margin-bottom: 20px;
+}
+
+.content_wrap_chart{
+    margin-bottom: 20px;
 }
 
 [class*="_icon_"]{
