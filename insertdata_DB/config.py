@@ -1,6 +1,15 @@
 # searching tweet config
 SEARCH_WORD = "WORLD CUP OR World Cup OR World cup OR world cup OR WORLDCUP OR WorldCup OR Worldcup OR worldcup"
+QUERY_OPERATOR = "-filter:retweets"
 NUMBER_TWEET = 10
+
+# collect tweet
+COLLECT_TWEET_LANGUAGE = "en"
+COLLECT_TWEET_MODE = "extended"
+
+# access twitter api
+ERROR_MESSAGE = "Credentials could not be verified: Please check config.py"
+SUCCESS_MESSAGE = "Connected to Twitter API as"
 
 #set time (Eastern Daylight Time)
 TIME_FORMAT_TWITTER = "%a %b %d %H:%M:%S +0000 %Y"

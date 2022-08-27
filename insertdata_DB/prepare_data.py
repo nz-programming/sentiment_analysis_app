@@ -14,7 +14,7 @@ import nltk
 import numpy as np
 
 def prepare_dataframe(SEARCH_WORD, NUMBER_TWEET):
-    query = f'{SEARCH_WORD} -filter:retweets'
+    query = f'{SEARCH_WORD} {QUERY_OPERATOR}'
 
     # import collect data
     tweets = collect_tweets(query, NUMBER_TWEET)

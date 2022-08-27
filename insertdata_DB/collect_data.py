@@ -1,3 +1,4 @@
+from config import *
 import tweepy as tw
 import config_twitter
 import datetime
@@ -14,16 +15,16 @@ def connect_api_client():
         api.verify_credentials()
         user = api.verify_credentials()
         if not user:
-            raise("Credentials could not be verified: Please check config.py")
-        print(f"Connected to Twitter API as {user.name}")
+            raise(ERROR_MESSAGE)
+        print(f"{SUCCESS_MESSAGE} {user.name}")
     except Exception as e:
         raise e
         
     return api
 
-def collect_tweets(query, ntweets):
+def collect_tweets(query, NUMBER_TWEET):
     api = connect_api_client()
-    tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang="en", tweet_mode='extended').items(ntweets)]
-    #tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang="en", tweet_mode='extended').items()]
+    tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang = COLLECT_TWEET_LANGUAGE, tweet_mode = COLLECT_TWEET_MODE).items(NUMBER_TWEET)]
+    #tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang = COLLECT_TWEET_LANGUAGE, tweet_mode = COLLECT_TWEET_MODE).items()]
     return tweets
 
