@@ -1,6 +1,6 @@
 from config import *
 from collect_data_twitterapi.prepare_data import prepare_dataframe
-import tweet_add
+from insert_data_db import tweet_add
 import datetime
 
 
