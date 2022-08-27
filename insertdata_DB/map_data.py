@@ -1,3 +1,4 @@
+from config import *
 from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.ext.declarative import declarative_base
@@ -7,7 +8,7 @@ Base = declarative_base()
 
 
 class map_data_db(Base):
-    __tablename__ = 'main'
+    __tablename__ = DB_TABLENAME
 
     id = Column(Integer, primary_key=True)
     polality_joson = Column(LONGTEXT, nullable=False)

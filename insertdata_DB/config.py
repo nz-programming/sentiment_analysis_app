@@ -52,3 +52,6 @@ MYSQL_PASSWORD = "admin"
 MYSQL_HOST = "localhost"
 MYSQL_DB = "tanalysis"
 ENGINE_CHARACTER_CODE = "utf-8"
+
+# map database
+DB_TABLENAME = "main"
