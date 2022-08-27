@@ -113,10 +113,10 @@ class showExampleTweet{
         username_2.innerText = data["user_screen_name"][ordered_object[1].key];
         username_3.innerText = data["user_screen_name"][ordered_object[2].key];
 
-        // score
-        score_1.innerText = data[column][ordered_object[0].key];
-        score_2.innerText = data[column][ordered_object[1].key];
-        score_3.innerText = data[column][ordered_object[2].key];
+        // score(rounded)
+        score_1.innerText = Math.round(data[column][ordered_object[0].key] * 100) / 100;
+        score_2.innerText = Math.round(data[column][ordered_object[1].key] * 100) / 100;
+        score_3.innerText = Math.round(data[column][ordered_object[2].key] * 100) / 100;
 
         // text
         text_1.innerText = data["text"][ordered_object[0].key];
