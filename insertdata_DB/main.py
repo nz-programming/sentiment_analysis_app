@@ -3,13 +3,8 @@ from prepare_data import prepare_dataframe
 import datetime
 import tweet_add
 
-# parameter for search and collect
-
-
-
-
 def get_data():
-    polality_json, retweet_json, keyword_json, keyphrase_json, clean_text, num_tweet, average_polality = prepare_dataframe(keyword, ntweets)
+    polality_json, retweet_json, keyword_json, keyphrase_json, clean_text, num_tweet, average_polality = prepare_dataframe(SEARCH_WORD, NUMBER_TWEET)
     print(f'main:{polality_json}')
     print(f'main:{retweet_json}')
 
