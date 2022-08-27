@@ -40,3 +40,15 @@ KEYWORDCOUNT_JSON_COUNT = "count"
 # create keyphrase_count_json
 KEYPHRASECOUNT_JSON_KEYPHRASE = "keyphrase"
 KEYPHRASECOUNT_JSON_COUNT = "count"
+
+# encode clean text
+CLEANTEXT_CHARACTER_CODE = "utf-8"
+
+# connect db
+DIALECT = "mysql"
+DRIVER = "pymysql"
+MYSQL_USER = "root"
+MYSQL_PASSWORD = "admin"
+MYSQL_HOST = "localhost"
+MYSQL_DB = "tanalysis"
+ENGINE_CHARACTER_CODE = "utf-8"

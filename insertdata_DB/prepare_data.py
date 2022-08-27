@@ -87,7 +87,7 @@ def prepare_dataframe(SEARCH_WORD, NUMBER_TWEET):
 
 
     #number tweet
-    num_tweet = len(tweets)
+    number_tweet = len(tweets)
 
 
     #average polality
@@ -98,6 +98,6 @@ def prepare_dataframe(SEARCH_WORD, NUMBER_TWEET):
     clean_text = all_text()
 
 
-    return(polality_json, retweet_json, keyword_json, keyphrase_json, clean_text, num_tweet, average_polality)
+    return(polality_json, retweet_json, keyword_json, keyphrase_json, clean_text, number_tweet, average_polality)
 
 
