@@ -2,11 +2,10 @@ from config import *
 from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.dialects.mysql import LONGTEXT, FLOAT, LONGBLOB 
+from sqlalchemy.dialects.mysql import LONGTEXT, FLOAT
+
 
 Base = declarative_base()
-
-
 class map_data_db(Base):
     __tablename__ = DB_TABLENAME
 

@@ -9,9 +9,7 @@ import re
 from nltk import word_tokenize
 from textblob import TextBlob
 from wordcloud import WordCloud
-import matplotlib.pyplot as plt
 import nltk
-import numpy as np
 
 def prepare_dataframe(SEARCH_WORD, NUMBER_TWEET):
     query = f'{SEARCH_WORD} {QUERY_OPERATOR}'
