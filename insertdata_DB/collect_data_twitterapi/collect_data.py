@@ -1,6 +1,6 @@
 from config import *
+from collect_data_twitterapi.config_twitter import consumer_key, consumer_secret, access_token, access_token_secret
 import tweepy as tw
-import config_twitter
 import datetime
 
 # set date for search and collect
@@ -8,8 +8,8 @@ untilDate=datetime.date.today()
 
 # establish an initial API connection
 def connect_api_client():
-    auth = tw.OAuthHandler(config_twitter.consumer_key, config_twitter.consumer_secret)
-    auth.set_access_token(config_twitter.access_token, config_twitter.access_token_secret)
+    auth = tw.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
     api = tw.API(auth, wait_on_rate_limit=True)
     try:
         api.verify_credentials()

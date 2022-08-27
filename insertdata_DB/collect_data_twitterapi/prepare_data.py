@@ -1,6 +1,6 @@
 from config import *
 import pandas as pd
-from collect_data import collect_tweets
+from collect_data_twitterapi.collect_data import collect_tweets
 import datetime
 from nltk.corpus import stopwords
 import html
