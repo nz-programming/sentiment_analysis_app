@@ -1,3 +1,4 @@
+from .config.config import *
 from django.urls import path
 from .views import views
 from .views import week
@@ -7,7 +8,7 @@ from .views import year
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('week', week.week_button, name='index'),
-    path('month', month.month_button, name='index'),
-    path('year', year.year_button, name='index'),
+    path(PATH_WEEKBUTTON, week.week_button, name = PATH_WEEKBUTTON),
+    path(PATH_MONTHBUTTON, month.month_button, name = PATH_MONTHBUTTON),
+    path(PATH_YEARBUTTON, year.year_button, name = PATH_YEARBUTTON),
 ]

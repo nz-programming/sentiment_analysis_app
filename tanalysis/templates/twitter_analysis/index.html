@@ -43,13 +43,13 @@
 
         <!-- button -->
         <div class="d-flex justify-content-center">
-            <form action="http://127.0.0.1:8000/twitter_analysis/week" method="get">
+            <form action="{% url 'week' %}" method="get">
                 <button type="submit" name="week_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Week</button>
             </form>
-            <form action="http://127.0.0.1:8000/twitter_analysis/month" method="get">
+            <form action="{% url 'month' %}" method="get">
                 <button type="submit" name="month_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Month</button>
             </form>
-            <form action="http://127.0.0.1:8000/twitter_analysis/year" method="get">
+            <form action="{% url 'year' %}" method="get">
                 <button type="submit" name="year_button" class="btn btn-outline-secondary btn-light text-muted border-secondary">Year</button>
             </form>
         </div>

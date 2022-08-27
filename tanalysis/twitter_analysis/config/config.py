@@ -8,3 +8,9 @@ SHOW_PERIOD_WEEK = datetime.timedelta(7)
 SHOW_PERIOD_MONTH = datetime.timedelta(30)
 SHOW_PERIOD_YEAR = datetime.timedelta(365)
 
+
+# urls.py
+PATH_WEEKBUTTON = "week"
+PATH_MONTHBUTTON = "month"
+PATH_YEARBUTTON = "year"
+
