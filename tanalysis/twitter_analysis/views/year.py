@@ -1,7 +1,6 @@
 from ..config.config import *
 from django.shortcuts import render
 from ..models import Main
-import datetime
 from .common.common import create_dataset
 
 def year_button(request):

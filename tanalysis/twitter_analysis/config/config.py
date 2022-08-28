@@ -10,6 +10,7 @@ SHOW_PERIOD_YEAR = datetime.timedelta(365)
 
 
 # urls.py
+PATH_INDEX = "index"
 PATH_WEEKBUTTON = "week"
 PATH_MONTHBUTTON = "month"
 PATH_YEARBUTTON = "year"
