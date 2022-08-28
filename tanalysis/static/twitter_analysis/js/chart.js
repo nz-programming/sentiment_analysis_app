@@ -1,7 +1,6 @@
 const create_date =  dataset["create_date"];
 const sentiment_score = dataset["average_polality"];
 const number_tweet = dataset["number_tweet"];
-console.log(number_tweet);
 
 // show analyzed period
 const period_start =  document.querySelector(`.period_start`);
@@ -38,8 +37,8 @@ var myLineChart  = new Chart(context, {
         maintainAspectRatio: false,
         scales: {
             "sentimentscoreChart": {
-                type: "linear",   // linear固定 
-                position: "left", // どちら側に表示される軸か？
+                type: "linear", 
+                position: "left",
                 title: {
                     display: true,
                     text: 'Sentiment Score'
@@ -47,19 +46,22 @@ var myLineChart  = new Chart(context, {
                 ticks: {
                     max: 1,
                     min: -1,
-                    beginAtZero:true
-                }
+                    beginAtZero:true,
+                },
             },
             "numbertweetChart": {
-                type: "linear",   // linear固定 
-                position: "right", // どちら側に表示される軸か？
+                type: "linear",
+                position: "right",
                 title: {
                     display: true,
                     text: 'Number of Tweet'
                 },
                 ticks: {
-                    beginAtZero:true
-                }
+                    beginAtZero:true,
+                },
+                grid: {
+                    display: false,
+                },
             },
             x: {
                 title: {

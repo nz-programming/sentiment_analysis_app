@@ -6,8 +6,12 @@ body{
     margin: 0;
 }
 
-.serch_word_wrap{
+.analyze_topic_wrap{
     padding: 10px 0;
+}
+
+.analyze_topic{
+    padding: 5px 0;
 }
 
 /* analysis */
