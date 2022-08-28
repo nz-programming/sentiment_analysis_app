@@ -1,3 +1,9 @@
+/* 
+
+This file create the chart on index.html page
+
+*/
+
 const create_date =  dataset["create_date"];
 const sentiment_score = dataset["average_polality"];
 const number_tweet = dataset["number_tweet"];
@@ -8,10 +14,9 @@ period_start.innerText = create_date[0];
 const period_end =  document.querySelector(`.period_end`);
 period_end.innerText = create_date[create_date.length - 1];
 
-// chart with chart.js
+// create chart with chart.js
 var context = document.getElementById("myChart").getContext('2d');
 var myLineChart  = new Chart(context, {
-    
     data: {
         labels: create_date,
         datasets: [{
