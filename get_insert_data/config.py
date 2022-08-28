@@ -1,5 +1,6 @@
 # searching tweet config
-SEARCH_WORD = "WORLD CUP OR World Cup OR World cup OR world cup OR WORLDCUP OR WorldCup OR Worldcup OR worldcup"
+# SEARCH_WORD = "WORLD CUP OR World Cup OR World cup OR world cup OR WORLDCUP OR WorldCup OR Worldcup OR worldcup"
+SEARCH_WORD = "lipstick"
 QUERY_OPERATOR = "-filter:retweets"
 NUMBER_TWEET = 10
 

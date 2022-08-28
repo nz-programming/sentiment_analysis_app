@@ -15,15 +15,15 @@ body{
     height: auto;
 }
 
-.term{
+.period{
     margin-right: 10px;
 }
 
-.term_start{
+.period_start{
     margin-right: 5px;
 }
 
-.term_end{
+.period_end{
     margin-left: 5px;
 }
 
