@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8"> 
         <!-- set favicon -->
-        <link rel="icon" href="#"> 
+        <link rel="icon" href="../static/twitter_analysis/img/favicon.png"> 
 
         <!-- Bootstrap 5 -->
         <link
@@ -60,7 +60,7 @@
         <!-- footer -->
         {% include "twitter_analysis/footer/footer.html" %}
 
-        <!-- read global variables for js-->
+        <!-- read dataset-->
         <script>
             {% autoescape off %}
                 dataset = {{data_json}}
@@ -71,7 +71,6 @@
         <script src="{% static 'twitter_analysis/js/chart.js' %}"></script>
         <script src="{% static 'twitter_analysis/js/clickhandler.js' %}"></script>
         <script src="{% static 'twitter_analysis/js/modalcontent.js' %}"></script>
-        <script src="{% static 'twitter_analysis/js/keyword_chart.js' %}"></script>
 
         <!-- Booststrap 5 -->
         <script
