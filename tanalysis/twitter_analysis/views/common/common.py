@@ -9,6 +9,7 @@ def create_dataset(queryset):
     retweet_json = []
     keyword_count = []
     keyphrase_count = []
+    number_tweet = []
 
     queryset = queryset
     for record in queryset:
@@ -24,6 +25,8 @@ def create_dataset(queryset):
         keyword_count.append(record.keyword_count)
         #JSON for number of keyphrase ranking
         keyphrase_count.append(record.keyphrase_count)
+        #number of tweet
+        number_tweet.append(record.number_tweet)
         
     var = {
         'create_date': create_date,
@@ -31,7 +34,8 @@ def create_dataset(queryset):
         'polality_json':polality_joson,
         'retweet_json':retweet_json,
         'keyword_count':keyword_count,
-        'keyphrase_count':keyphrase_count
+        'keyphrase_count':keyphrase_count,
+        'number_tweet':number_tweet,
     }
 
     dataset = {'data_json':json.dumps(var, default=str)}
