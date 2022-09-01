@@ -56,6 +56,7 @@ class createModalRanking{
         // get data at clicked index
         const label = myLineChart.data.labels[this.index];
         const data = datasource[this.index];
+        console.log(data);
 
         // grab html tag 
         const modal_title =  document.querySelector('.modal-title');
@@ -78,7 +79,7 @@ class createModalRanking{
 
         // sort object
         const ordered_object = this.sortObject(data[column]);
-
+        console.log(ordered_object);
         // set html value
         modal_title.innerText = label;
 

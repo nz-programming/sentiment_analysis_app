@@ -17,6 +17,11 @@ def prepare_dataframe(SEARCH_WORD, NUMBER_TWEET):
     # import collect data
     tweets = collect_tweets(query, NUMBER_TWEET)
 
+    print(type(tweets))
+    import json
+    json_string = json.dumps(tweets)
+    df_chack = pd.read_json(json_string)
+    df_chack.to_csv('get_insert_data\collect_data_twitterapi\csv_output.csv')
 
     # transform created_at into edt 
     def time_transform(created_at):
@@ -93,7 +98,8 @@ def prepare_dataframe(SEARCH_WORD, NUMBER_TWEET):
 
 
     #create a clean text
-    clean_text = all_text()
+    # clean_text = all_text()
+    clean_text = "dummy"
 
 
     return(polality_json, retweet_json, keyword_json, keyphrase_json, clean_text, number_tweet, average_polality)

@@ -4,7 +4,7 @@ import tweepy as tw
 import datetime
 
 # set date for search and collect
-untilDate=datetime.date.today()
+untilDate=datetime.date.today() - datetime.timedelta(-7)
 
 # establish an initial API connection
 def connect_api_client():
@@ -24,7 +24,9 @@ def connect_api_client():
 
 def collect_tweets(query, NUMBER_TWEET):
     api = connect_api_client()
+    print(untilDate)
     #tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang = COLLECT_TWEET_LANGUAGE, tweet_mode = COLLECT_TWEET_MODE).items(NUMBER_TWEET)]
-    tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang = COLLECT_TWEET_LANGUAGE, tweet_mode = COLLECT_TWEET_MODE).items()]
+    #tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, until = untilDate, lang = COLLECT_TWEET_LANGUAGE, tweet_mode = COLLECT_TWEET_MODE).items()]
+    tweets = [tweet._json for tweet in tw.Cursor(api.search_tweets, q=query, lang = COLLECT_TWEET_LANGUAGE, tweet_mode = COLLECT_TWEET_MODE).items()]
     return tweets
 
