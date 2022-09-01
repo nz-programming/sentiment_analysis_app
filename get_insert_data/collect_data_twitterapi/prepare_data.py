@@ -75,7 +75,7 @@ def prepare_dataframe(SEARCH_WORD, NUMBER_TWEET):
 
     keywords = WordCloud().process_text(all_text())
     df_keywords = pd.DataFrame(list(keywords.items()), columns=[KEYWORDCOUNT_JSON_KEYWORD, KEYWORDCOUNT_JSON_COUNT]).set_index(KEYWORDCOUNT_JSON_KEYWORD)
-    df_keywords = df_keywords.sort_values(by = KEYWORDCOUNT_JSON_KEYWORD, ascending = False).head(5)
+    df_keywords = df_keywords.sort_values(by = KEYWORDCOUNT_JSON_COUNT, ascending = False).head(5)
     keyword_json = df_keywords.to_json()
 
 
