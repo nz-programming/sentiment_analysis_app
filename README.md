@@ -6,14 +6,14 @@ This is the app to monitor how people feel about "FIFA World Cup 2022" using sen
 
 ## Function
 This application ...
-- Describe the Twitter sentiment analysis figure in chronological order<br>
+- Describe the Twitter sentiment analysis figure in chronological order
     * retrieve tweets that contain relevant keywords of "FIFA World Cup 2022" daily by using Twitter API, and analyze Sentiment score with python
-- Change the analyzed period to "Week", "Month", "Year" and show it on a chart dinamically<br>
-    retrieve the specific data from DB responding to the request from the front end and show them on it with Javascript
-- Show modal to describe the detail of each of the day<br>
-    by clicking the item of each day on the chart, show detailed data on the day, such as "Sentiment score Top 3 Ranking"、" Number of Retweet Top 3 Ranking", "Popular Keyword", "Popular KeyPhrase"
-- Add the latest data daily <br>
-    newly analyzed data is added to DB daily and the main chart is revised every day
+- Change the analyzed period to "Week", "Month", "Year" and show it on a chart dinamically
+    * retrieve the specific data from DB responding to the request from the front end and show them on it with Javascript
+- Show modal to describe the detail of each of the day
+    * by clicking the item of each day on the chart, show detailed data on the day, such as "Sentiment score Top 3 Ranking"、" Number of Retweet Top 3 Ranking", "Popular Keyword", "Popular KeyPhrase"
+- Add the latest data daily
+    * newly analyzed data is added to DB daily and the main chart is revised every day
 
 ## How to use
 - Exciting World Cup button: display the chart with all data in DB
@@ -22,14 +22,14 @@ This application ...
 - Year button: display the chart with data from today to 365 days ago
 
 ## Main Technologies
-- Python 3.9.12<br>
-    Tweepy 4.10.0, NLTK 3.7, TextBlob 0.15.3, WordCloud 1.8.2.2
-    Django 4.0, Sqlalchemy 1.4.32
-- Javascript<br>
-    Chart.js 3.9.1
+- Python 3.9.12
+    * Tweepy 4.10.0, NLTK 3.7, TextBlob 0.15.3, WordCloud 1.8.2.2
+    * Django 4.0, Sqlalchemy 1.4.32
+- Javascript
+    * Chart.js 3.9.1
 - MariaDB 10.4.22
-- HTML,CSS<br>
-    Bootstrap 5.0.2
+- HTML,CSS
+    * Bootstrap 5.0.2
 
 I chose these major and popular technologies from many developers to enable me to develop this application smoothly with plenty of documents because I was not familiar with this type of development.
 
