@@ -34,7 +34,7 @@ This application ...
 I chose these major and popular technologies used by many developers to enable me to develop this application smoothly with plenty of documents because I was not familiar with this type of development.
 
 ## Application structure
-![NW_structure_diagram](https://user-images.githubusercontent.com/79392148/188246212-c8f6f1e5-3430-40db-96cc-0253b8fd4972.png)
+![NW_structure_diagram](https://user-images.githubusercontent.com/79392148/188246316-74ede826-b020-4a6f-8940-bbd247229ec7.png)
 ## Purpose of this Application
 - To monitor what's going on in FIFA World Cup 2022 and find out the correlation between what happened in the event and the change of emotion of people. What's more, just I love soccer.
 
