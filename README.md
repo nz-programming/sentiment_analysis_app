@@ -6,7 +6,7 @@ This is the app to monitor how people feel to "FIFA World Cup 2022" using sentim
 
 ## Functioin
 This application ...
-- Describe twitter sentiment analysis figure in chronological order
+- Describe twitter sentiment analysis figure in chronological order<br>
     retrieve tweets which contain relevant keyword of "FIFA World Cup 2022" daily by using Twitter API, and analyze Sentiment score with python
 - Change the analyzed period to "Week", "Month", "Year" and show it on a chart dinamically 
     retrive the specific data from DB responding to the request from front end and show them on front end with Javascript
