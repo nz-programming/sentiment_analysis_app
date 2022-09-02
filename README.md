@@ -25,4 +25,25 @@ This application ...
 - HTML,CSS
     Bootstrap 5.0.2
 
+I chose these major and popular technologies by many developers to enable me to develop this application smoothly with plenty of documents because I'm not familiar with this type of development.
 
+## How to use
+- Exciting World Cup button: desplay the chart with all data in DB
+- Week button: desplay the chart with data over from today to 7 days ago
+- Month button: desplay the chart with data over from today to 30 days ago
+- Year button: desplay the chart with data over from today to 365 days ago
+
+## Application structure
+
+
+## Purpose of this Application
+- To monitor what's going on in FIFA World Cup 2022 and find out corralation between what happen in the event and change of emotion of people. What's more, just I love succor.
+
+## Points of Development
+- Making original stopword list to increase the precision of sentiment analysis when cleaning text content each op the tweet
+- Analyzing tweets and put data on each day together by using JSON format before inserting data into DB to reduce data volume
+- Building folda structure functionally and refactor code without hard coding as much as possible to maintain maintainability
+## Future Update
+- Deploy this app on an online server to release 
+- Impliment function to change analyzed period on demand
+- Impliment login function to enable each of the user to change search keywords
