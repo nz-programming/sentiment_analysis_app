@@ -31,7 +31,7 @@ This application ...
 - HTML,CSS
     * Bootstrap 5.0.2
 
-I chose these major and popular technologies from many developers to enable me to develop this application smoothly with plenty of documents because I was not familiar with this type of development.
+I chose these major and popular technologies used by many developers to enable me to develop this application smoothly with plenty of documents because I was not familiar with this type of development.
 
 ## Application structure
 
