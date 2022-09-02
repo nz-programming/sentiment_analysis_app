@@ -11,3 +11,4 @@
 # Built Visual Studio Code Extensions
 *.vsix
 config_twitter.py
+csv_output.csv
