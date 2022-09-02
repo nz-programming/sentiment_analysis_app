@@ -8,11 +8,11 @@ This is the app to monitor how people feel to "FIFA World Cup 2022" using sentim
 This application ...
 - Describe twitter sentiment analysis figure in chronological order<br>
     retrieve tweets which contain relevant keyword of "FIFA World Cup 2022" daily by using Twitter API, and analyze Sentiment score with python
-- Change the analyzed period to "Week", "Month", "Year" and show it on a chart dinamically 
+- Change the analyzed period to "Week", "Month", "Year" and show it on a chart dinamically<br>
     retrive the specific data from DB responding to the request from front end and show them on front end with Javascript
-- Show modal to describe the detail of each of the days
+- Show modal to describe the detail of each of the days<br>
     by clicking the item of the each day on chart, show detail data on the day, such as "Sentiment score Top 3 Raning"、"Number of Retweet Top 3 Raning", "Popular Keyword", "Popular KeyPhrase"
-- Add the latest data on a daily basis
+- Add the latest data on a daily basis<br>
     new analyzed data is add to DB daily and main chart is revised every day
 
 ## How to use
@@ -22,13 +22,13 @@ This application ...
 - Year button: desplay the chart with data over from today to 365 days ago
 
 ## Main Technologies
-- Python 3.9.12 
+- Python 3.9.12<br>
     Tweepy 4.10.0, NLTK 3.7, TextBlob 0.15.3, WordCloud 1.8.2.2
     Django 4.0, sqlalchemy 1.4.32
-- Javascript
+- Javascript<br>
     Chart.js 3.9.1
 - MariaDB 10.4.22
-- HTML,CSS
+- HTML,CSS<br>
     Bootstrap 5.0.2
 
 I chose these major and popular technologies by many developers to enable me to develop this application smoothly with plenty of documents because I'm not familiar with this type of development.
