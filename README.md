@@ -15,6 +15,12 @@ This application ...
 - Add the latest data on a daily basis
     new analyzed data is add to DB daily and main chart is revised every day
 
+## How to use
+- Exciting World Cup button: desplay the chart with all data in DB
+- Week button: desplay the chart with data over from today to 7 days ago
+- Month button: desplay the chart with data over from today to 30 days ago
+- Year button: desplay the chart with data over from today to 365 days ago
+
 ## Main Technologies
 - Python 3.9.12 
     Tweepy 4.10.0, NLTK 3.7, TextBlob 0.15.3, WordCloud 1.8.2.2
@@ -27,14 +33,7 @@ This application ...
 
 I chose these major and popular technologies by many developers to enable me to develop this application smoothly with plenty of documents because I'm not familiar with this type of development.
 
-## How to use
-- Exciting World Cup button: desplay the chart with all data in DB
-- Week button: desplay the chart with data over from today to 7 days ago
-- Month button: desplay the chart with data over from today to 30 days ago
-- Year button: desplay the chart with data over from today to 365 days ago
-
 ## Application structure
-
 
 ## Purpose of this Application
 - To monitor what's going on in FIFA World Cup 2022 and find out corralation between what happen in the event and change of emotion of people. What's more, just I love succor.
