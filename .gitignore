@@ -12,3 +12,4 @@
 *.vsix
 config_twitter.py
 csv_output.csv
+config_twitter.cpython-39.pyc
