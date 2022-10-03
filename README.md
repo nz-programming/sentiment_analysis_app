@@ -1,4 +1,4 @@
-## "Exciting World Cup 2022"
+## Sentiment analysis application "Exciting World Cup 2022"
 This application is named "Exciting World Cup 2022". 
 This is the app to monitor how people feel about "FIFA World Cup 2022" using sentiment scores analyzed with Twitter.
 
