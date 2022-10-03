@@ -1,7 +1,7 @@
 # searching tweet config
 SEARCH_WORD = "WORLD CUP OR World Cup OR World cup OR world cup OR WORLDCUP OR WorldCup OR Worldcup OR worldcup"
 QUERY_OPERATOR = "-filter:retweets"
-NUMBER_TWEET = 10
+NUMBER_TWEET = 100
 
 # collect tweet
 COLLECT_TWEET_LANGUAGE = "en"
