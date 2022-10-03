@@ -3,6 +3,7 @@ This application is named "Exciting World Cup 2022".
 This is the app to monitor how people feel about "FIFA World Cup 2022" using sentiment scores analyzed with Twitter.
 
 ## Demo
+![Sentiment Analysis](https://user-images.githubusercontent.com/79392148/193696046-41974f30-184b-4dfb-9808-28e94f518654.gif)
 
 ## Function
 This application ...
