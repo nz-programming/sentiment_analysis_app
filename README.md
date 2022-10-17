@@ -10,9 +10,9 @@ Youtube: https://youtu.be/nA2j7uHqDsA
 This application ...
 - Describe the Twitter sentiment analysis figure in chronological order
     * retrieve tweets that contain relevant keywords of "FIFA World Cup 2022" daily by using Twitter API, and analyze Sentiment score with python
-- Change the analyzed period to "Week", "Month", "Year" and show it on a chart dinamically
+- Change the analyzed period to "Week", "Month" or "Year" and show it on a chart dynamically
     * retrieve the specific data from DB responding to the request from the front end and show them on it with Javascript
-- Show modal to describe the detail of each of the day
+- Show a modal to describe the detail of each of the day
     * by clicking the item of each day on the chart, show detailed data on the day, such as "Sentiment score Top 3 Ranking"、" Number of Retweet Top 3 Ranking", "Popular Keyword", "Popular KeyPhrase"
 - Add the latest data daily
     * newly analyzed data is added to DB daily and the main chart is revised every day
